@@ -41,9 +41,9 @@ def nussinov_fold(sequence):
         return 0, "."*len(sequence)
 
     # CASO 1: la primer base no forma ningun emparejamiento
-    e, s = nussinov_fold(sequence[1:]) # llamada recursiva a la porcion restante
-    s = "." + s # una base sin emparejar se representa con un punto
-    alternatives = [(e, s)]  # lista de estructuras posibles (y sus energias)
+    e, s = nussinov_fold(sequence[1:])
+    s = "." + s
+    alternatives = [(e, s)]
 
     # CASO 2: la primer base forma enlace con un nucleotido dentro de la secuencia
     # Se prueban todos los casos posibles con un bucle
